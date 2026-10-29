@@ -37,4 +37,3 @@ These are portfolio prototypes, not claimed client deployments. The static demos
 - GitHub: https://github.com/yasinor009
 - CryptoTask: https://www.cryptotask.org/en/freelancers/yas-god/60518 (subject to platform profile approval)
 
-No employment history, education credentials or certifications are asserted without supplied details.
