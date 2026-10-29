@@ -1,73 +1,43 @@
-# YAS GOD — Developer Portfolio & Interactive Demos
+# YAS GOD — Developer Portfolio
 
-A small, accessible portfolio with three working, browser-local concept demos. Built with HTML, CSS and JavaScript, with optional local Python and PHP API examples.
+[Live portfolio](https://yasinor009.github.io/yas-god-portfolio/) · [GitHub profile](https://github.com/yasinor009) · [Résumé](RESUME.md)
 
-**Live demo:** https://yasinor009.github.io/yas-god-portfolio/
+A responsive HTML/CSS/JavaScript portfolio with interactive inventory and education concept demos, a visual-only private-project showcase, and a printable résumé.
 
-**Author:** [YAS GOD / yasinor009](https://github.com/yasinor009)
+## Previews
 
-## Try the demos
+| Page | Public scope |
+| --- | --- |
+| `inventory.html` | Fictional stock records, search and browser-local stock movements |
+| `academy.html` | Example lessons and browser-local progress |
+| `distance.html` | **Visual demo only** — a supplied screenshot and a presentation page |
+| `resume.html` | Printable résumé with PDF download |
 
-Open `index.html`, or run:
+## Private object-distance project
+
+The object-distance entry is a visual-only portfolio preview. For project security, the full contents, internal logic, technical details and operational features are intentionally withheld. The original source package has not been uploaded to this repository. This public preview does not execute the underlying project.
+
+این بخش صرفاً دموی ظاهری پروژه است. برای حفظ امنیت پروژه، محتویات کامل، منطق داخلی و بخش‌های اصلی آن منتشر نشده‌اند.
+
+## Run the public portfolio
 
 ```sh
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-Visit http://127.0.0.1:8000. No build step or third-party JavaScript runtime is required.
+Open http://127.0.0.1:8000. No build step is required. GitHub Pages publishes the static files from `main`, `/ (root)`.
 
-| Demo | Working interactions | Scope |
-| --- | --- | --- |
-| `inventory.html` | Search, stock in/out, low-stock alerts, reset and persistence | Fictional pharmacy stock; browser-local data |
-| `academy.html` | Complete/undo lessons, progress bar, reset and persistence | Three illustrative lessons; no student accounts |
-| `distance.html` | Calibrated width/focal-length inputs, validation, immediate estimate | Synthetic pinhole-camera calculation; no live detection |
-| `resume.html` | Printable résumé and PDF export through the print dialog | Project-based profile; no invented employment or qualifications |
+## Public files
 
-## Optional Python API
+- `index.html`, `styles.css`: portfolio and responsive visual design.
+- `app.js`: the unrelated inventory and lesson demos; browser-local data only.
+- `distance.html`, `distance-preview.jpg`: static interface preview and supplied screenshot.
+- `resume.html`, `RESUME.md`, `YAS-GOD-Resume.pdf`: résumé formats.
+- `inventory_api.php`: an independent, read-only PHP/PDO example using fictional in-memory records; PHP 8+ and `pdo_sqlite` required for local execution. GitHub Pages does not run PHP.
+- `profile.jpg`: owner-supplied coding-workspace photograph.
 
-Python 3.10+; standard library only:
+## Demo notes
 
-```sh
-python distance_api.py
-curl 'http://127.0.0.1:8001/api/distance?width_m=0.3&focal_px=2400&image_width_px=60'
-python -m unittest -v
-```
+Inventory and education records are fictional. These public examples do not contain the original applications' private code. Keyboard focus states, labelled inputs, reduced-motion support, responsive layouts and local storage are included for the interactive examples. User-entered text is rendered as text rather than HTML. Local storage is optional and is not suitable for sensitive information.
 
-Valid inputs return JSON with `distance_m` and `demo: true`. Missing, repeated, non-finite, non-positive or out-of-range measurements are rejected. Unknown routes return 404. This is a local example, not a production server. The static browser demo calculates locally and does not call this API.
-
-## Optional PHP/PDO example
-
-Requires PHP 8+ with `pdo_sqlite`:
-
-```sh
-php -S 127.0.0.1:8002
-curl 'http://127.0.0.1:8002/inventory_api.php?search=para'
-```
-
-The endpoint demonstrates prepared SQL statements against fictional, in-memory records. It is read-only and resets on every request. MySQL is a profile skill; this sample intentionally uses SQLite so it needs no database credentials. GitHub Pages hosts static files and does not execute PHP or Python.
-
-## Structure
-
-- `index.html`, `styles.css`: responsive portfolio and shared visual system.
-- `app.js`: local persistence, input validation and DOM rendering.
-- `inventory.html`, `academy.html`, `distance.html`: interactive prototypes.
-- `resume.html`, `RESUME.md`: résumé in printable and plain-text formats.
-- `distance_api.py`, `test_distance_api.py`: optional Python endpoint and unit tests.
-- `inventory_api.php`: optional read-only PHP/PDO endpoint.
-- `profile.jpg`: user-supplied coding workspace photograph.
-
-## Design and accessibility
-
-Keyboard focus states, semantic headings, labelled inputs, visible status messages, responsive layouts and reduced-motion support. Text uses system fonts if optional Google Fonts cannot load. Browser storage is optional; interactions work in memory when storage is blocked. User-entered data is rendered as text, not HTML.
-
-## Demo status and provenance
-
-These are new demonstration implementations inspired by the owner's supplied screenshots of inventory and education interfaces and a distance-estimation prototype. They do **not** reproduce or contain source code from the original projects. All inventory records and course progress are fictional. The distance demo makes no claim of real drone detection or validated measurement accuracy. No client names, testimonials, revenue, employment dates or certifications have been invented.
-
-## Deployment
-
-For GitHub Pages, publish the repository's `main` branch, `/ (root)` folder under **Settings → Pages**. The static HTML, CSS, JavaScript and image files require no build. PHP and Python examples run locally only. No account passwords, tokens or CryptoTask sessions belong in this repository.
-
-## Known limits
-
-No authentication, shared database, payments, camera feed, actual image recognition or production deployment of the optional APIs. localStorage can be cleared and is not appropriate for sensitive data. API examples need normal production hardening before public server use.
+Older generic distance-calculator examples have been removed from the current version to keep the object-distance entry presentation-only. They were independent examples, not the private project's source code.

@@ -45,10 +45,5 @@ function renderAcademy() {
  }
  $('reset').addEventListener('click',()=>{completed.clear();storage.write('lessons',[]);draw();});draw();
 }
-function renderDistance(){
- const inputs=['real-width','focal-length','pixel-width'];
- function draw(){const [width,focal,pixels]=inputs.map(id=>Number($(id).value));const result=width*focal/pixels;if(![width,focal,pixels].every(v=>Number.isFinite(v)&&v>=0.001&&v<=1000000)||!Number.isFinite(result)){ $('distance-result').textContent='—';$('distance-error').textContent='Enter finite positive values from 0.001 to 1,000,000.';return;}$('distance-error').textContent='';$('distance-result').textContent=result.toFixed(2);$('target-box').style.width=`${Math.max(24,Math.min(pixels*1.6,250))}px`;}
- inputs.forEach(id=>$(id).addEventListener('input',draw));$('reset').addEventListener('click',()=>{inputs.forEach((id,i)=>$(id).value=[0.3,2400,60][i]);draw();});draw();
-}
 if($('year'))$('year').textContent=String(new Date().getFullYear());
-({inventory:renderInventory,academy:renderAcademy,distance:renderDistance}[document.body.dataset.demo]||(()=>{}))();
+({inventory:renderInventory,academy:renderAcademy}[document.body.dataset.demo]||(()=>{}))();

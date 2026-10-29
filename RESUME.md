@@ -19,7 +19,7 @@ I develop and improve practical web interfaces and application features. I focus
 - Pharmacy inventory dashboard: stock summaries, movement workflows, low-stock and expiry indicators.
 - Python and AI education websites: learning paths, course navigation and account interfaces.
 - Education administration dashboard: summary cards, management navigation and activity charts.
-- Visual distance-estimation prototype: synthetic targets, calibration controls and illustrative measurements. No validated real-world detection accuracy is claimed.
+- Object-distance project: visual-only interface preview. Full contents and internal implementation are withheld for project security.
 
 Descriptions are based on supplied screenshots. Source code for these original projects is not included in this repository.
 
@@ -27,7 +27,7 @@ Descriptions are based on supplied screenshots. Source code for these original p
 
 - **Stockroom:** searchable browser-local stock, validated movements and low-stock indicators.
 - **Learning desk:** example lessons with completion tracking and persistent local progress.
-- **Distance lab:** adjustable pinhole-camera distance calculation with validation and a local Python API example.
+- **Object distance:** a static visual preview of a private project; internal contents and functionality are withheld.
 - **PHP/PDO example:** read-only search against fictional in-memory inventory using prepared statements.
 
 These are portfolio prototypes, not claimed client deployments. The static demos are built with vanilla JavaScript; React is listed as a profile skill, not as the implementation framework of these demos.
